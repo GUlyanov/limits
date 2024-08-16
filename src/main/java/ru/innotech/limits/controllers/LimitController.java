@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/limits")
 public class LimitController {
-    private LimitService limitService;
+    private final LimitService limitService;
 
     public LimitController(LimitService limitService) {
         this.limitService = limitService;
