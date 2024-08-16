@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cbe1e0c-0c01-4635-b46a-70c67c172c0d" name="Changes" comment="Первый коммит">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/dtos/ErrorResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0_1__data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/config/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/config/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/controllers/ExceptionControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/controllers/ExceptionControllerAdvice.java" afterDir="false" />
+    <list default="true" id="9cbe1e0c-0c01-4635-b46a-70c67c172c0d" name="Changes" comment="Третий коммит">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/AppLimits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/AppLimits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/config/AppConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/entities/Limit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/entities/Limit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/exceptions/InsufficientLimitValueEx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/exceptions/InsufficientLimitValueEx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/services/LimitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/innotech/limits/services/LimitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1_0_0__schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +87,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723620885117</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Третий коммит">
+      <option name="closed" value="true" />
+      <created>1723812959913</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723812959913</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +111,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит" />
-    <option name="LAST_COMMIT_MESSAGE" value="Первый коммит" />
+    <MESSAGE value="Третий коммит" />
+    <option name="LAST_COMMIT_MESSAGE" value="Третий коммит" />
   </component>
 </project>
