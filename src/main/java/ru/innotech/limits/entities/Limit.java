@@ -1,17 +1,19 @@
 package ru.innotech.limits.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "limits")
-@Data
-@NoArgsConstructor
 public class Limit {
     @Id
     @GeneratedValue(strategy = IDENTITY)
