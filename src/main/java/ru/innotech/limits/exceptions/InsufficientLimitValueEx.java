@@ -6,9 +6,9 @@ import java.math.BigDecimal;
 
 @Getter
 public class InsufficientLimitValueEx extends RuntimeException {
-    Long userId;
-    BigDecimal valueOld;
-    BigDecimal delta;
+    private final Long userId;
+    private final BigDecimal valueOld;
+    private final BigDecimal delta;
 
     public InsufficientLimitValueEx(String message, Long userId, BigDecimal valueOld, BigDecimal delta) {
         super(message);

@@ -27,4 +27,3 @@ limits:
 cron:
   expression: 0 0 0 * * *
   zone: Asia/Krasnoyarsk
-

@@ -12,18 +12,4 @@ import ru.innotech.limits.repositories.LimitRepo;
 @EnableConfigurationProperties({LimitProps.class})
 @EnableScheduling
 public class AppConfig {
-    // Установить дневной лимит всем пользователям (внедрение приложения)
-    @Bean
-    public CommandLineRunner dataLoader(
-            LimitRepo limitRepo, LimitProps limitProps) {
-        return args -> {
-            limitRepo.deleteAll();
-            Limit limit;
-            for (long i = 0L; i < limitProps.getUserCount(); i++) {
-                limit = new Limit(i, limitProps.getDayValue());
-                limitRepo.save(limit);
-            }
-        };
-
-    }
 }

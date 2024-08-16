@@ -14,12 +14,11 @@ import ru.innotech.limits.repositories.LimitRepo;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class LimitService {
-    LimitRepo limitRepo;
-    LimitProps limitProps;
+    private final LimitRepo limitRepo;
+    private final LimitProps limitProps;
 
     public LimitService(LimitRepo limitRepo, LimitProps limitProps) {
         this.limitRepo = limitRepo;
@@ -43,8 +42,7 @@ public class LimitService {
     // Получить лимит для пользователя, если лимит не существует, то создать его
     @Transactional
     public Limit getLimitForUserOrCreate(Long userId) {
-        Optional<Limit> optionalLimit = limitRepo.findLimitByUserId(userId);
-        return optionalLimit.orElseGet(() -> createLimit(userId));
+        return limitRepo.findLimitByUserId(userId).orElseGet(() -> createLimit(userId));
     }
 
     // Модифицировать лимит пользователя
@@ -79,10 +77,10 @@ public class LimitService {
 
     // Получить список лимитов, меньших максимального
     public List<LimitRespSmall> getLimitsUpdated() {
-        BigDecimal maxLimit = limitProps.getDayValue();
-        List<Limit> lst = limitRepo.findLimitsUpdated(maxLimit);
-        return lst.stream()
-                .map(x -> new LimitRespSmall(x.getUserId(), x.getValue()))
+        BigDecimal dayLimit = limitProps.getDayValue();
+        List<Limit> limitList = limitRepo.findLimitsUpdated(dayLimit);
+        return limitList.stream()
+                .map(limit -> new LimitRespSmall(limit.getUserId(), limit.getValue()))
                 .toList();
     }
 
@@ -90,7 +88,6 @@ public class LimitService {
     @Scheduled(cron = "${cron.expression}", zone = "${cron.zone}")
     @Transactional
     public void resetLimits() {
-        BigDecimal maxLimit = limitProps.getDayValue();
-        limitRepo.resetLimits(maxLimit);
+        limitRepo.resetLimits(limitProps.getDayValue());
     }
 }
